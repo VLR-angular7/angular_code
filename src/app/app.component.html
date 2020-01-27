@@ -1,0 +1,96 @@
+<h1>App component</h1>
+
+<p *ngIf="show;else notShow">Welcome to Hyd</p>
+
+
+<h1>Welocme to angular class</h1>
+
+<ng-template>
+  <h1>Welocme to directives class</h1>
+</ng-template>
+
+<ng-template #notShow>
+
+  <h1>Welocme to directives class</h1>
+</ng-template>
+
+
+
+
+
+
+<table>
+  <tr>
+    <th>S.No</th>
+    <th>
+      Employee Name
+    </th>
+    <th>Employee Age</th>
+    <th>Employee city</th>
+    <th>Employee Salary</th>
+  </tr>
+
+
+  <!-- <tr *ngFor="let employee of employees;let i=index">
+<td>{{i+1}}</td>
+    <td>{{employee.name}}</td>
+    <td>{{employee.age}}</td>
+    <td>{{employee.city}}</td>
+    <td>{{employee.salary}}</td>
+
+  </tr> -->
+
+
+
+</table>
+
+
+
+
+
+<div *ngFor="let employee of employees">
+
+  <img src="{{employee.empImg}}" alt="">
+
+  <h3>{{employee.name}}</h3>
+
+</div>
+
+
+
+
+
+<hr>
+<ul>
+  <li *ngFor="let team of cricketTeams ">
+
+    {{team.teamName}}
+
+    <ul>
+      <li *ngFor="let player of team.players">
+
+        {{player.name}}
+      </li>
+    </ul>
+
+  </li>
+</ul>
+
+
+
+
+
+<div>
+
+  <p *ngFor="let movie of movies">
+    {{movie}}
+  </p>
+</div>
+
+
+
+
+
+
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
