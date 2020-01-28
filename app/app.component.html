@@ -1,0 +1,147 @@
+
+
+<!-- 
+// 1. Not operator (!)
+// 2. Logical OR operator (||)
+//3. Logical AND operator(&&) -->
+
+
+<!-- 
+//ngswitch
+
+<container [ngSwitch]="expression">
+
+  <p expressioncheck></p>
+  <p expressioncheck></p>
+
+
+</container> -->
+
+
+<!-- 
+
+  ng generate directive directiveName
+
+ -->
+
+<!-- <h1 appHighlight>Welcome to VLR</h1> -->
+
+
+<!-- <appHighlight>Welcome</appHighlight> -->
+
+
+
+
+<!-- <h3 class="appHighlight">HYD</h3> -->
+
+
+<app-header></app-header>
+
+
+
+<div [ngSwitch]="inputValue">
+  <p *ngSwitchCase="'HYD'">Hello HYD</p>
+  <p *ngSwitchCase="'BLR'">Hello BLR</p>
+  <p *ngSwitchCase="'MUM'">Hello MUM</p>
+  <p *ngSwitchDefault>Hello Pune</p>
+
+
+</div>
+
+
+
+
+
+
+<h3 *ngIf="!show">Hello HYD</h3>
+
+<h3 *ngIf="isSE && isDeveloper">Software engineer</h3>
+
+<p *ngIf="getProducts()>4">There are more than 4 products</p>
+
+
+
+
+
+
+<table>
+  <tr>
+    <th>S.No</th>
+    <th>
+      Employee Name
+    </th>
+    <th>Employee Age</th>
+    <th>Employee city</th>
+    <th>Employee Salary</th>
+    <th>Action</th>
+  </tr>
+
+
+  <tr *ngFor="let employee of employees;let i=index;let even=even;let odd=odd; let first=first;let last=last" [ngClass]="{evenClass:first,oddClass:odd}">
+<td>{{i+1}}</td>
+    <td>{{employee.name}}</td>
+    <td>{{employee.age}}</td>
+    <td>{{employee.city}}</td>
+    <td>{{employee.salary}}</td>
+    <td><button class="btn btn-warning">EDIT</button></td>
+
+  </tr>
+
+
+
+</table>
+
+
+<ul *ngFor="let team of cricketTeams" [ngSwitch]="team.teamName">
+
+  <li *ngSwitchCase="'IND'" class="text-danger">{{team.teamName}}</li>
+  <li *ngSwitchCase="'AUS'" class="text-info">{{team.teamName}}</li>
+  <li *ngSwitchCase="'NZ'" class="text-warning">{{team.teamName}}</li>
+
+</ul>
+
+
+
+
+
+<!-- 
+
+
+<div *ngFor="let employee of employees">
+
+  <img src="{{employee.empImg}}" alt="">
+
+  <h3>{{employee.name}}</h3>
+
+</div> -->
+
+
+
+
+
+<hr>
+<ul>
+  <li *ngFor="let team of cricketTeams ">
+
+    {{team.teamName}}
+
+    <ul>
+      <li *ngFor="let player of team.players">
+
+        {{player.name}}
+      </li>
+    </ul>
+
+  </li>
+</ul>
+
+
+
+
+
+<div>
+
+  <p *ngFor="let movie of movies">
+    {{movie}}
+  </p>
+</div>
