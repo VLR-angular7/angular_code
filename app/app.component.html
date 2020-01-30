@@ -34,8 +34,41 @@
 
 <!-- <h3 class="appHighlight">HYD</h3> -->
 
-
 <app-header></app-header>
+
+<table>
+  <tr>
+    <th>S.No</th>
+    <th>
+      Employee Name
+    </th>
+    <th>Employee Gender</th>
+    <th>Employee DOB</th>
+    <th>Employee city</th>
+    <th>Employee Salary</th>
+    <th>Action</th>
+
+  </tr>
+
+
+  <tr *ngFor="let employee of employees;let i=index;">
+<td>{{i+1}}</td>
+    <td>{{employee.name | employeePipe:employee.gender:employee.city}}</td>
+    <td>{{employee.gender}}</td>
+    <td>{{employee.dob | employeeAgePipe}}</td>
+    <td>{{employee.city}}</td>
+    <td>{{employee.salary}}</td>
+    <td><button (click)="editEmployee(employee)" class="btn btn-success">{{employee.action}}</button></td>
+
+  </tr>
+
+
+
+</table>
+
+
+
+<app-pipes></app-pipes>
 
 
 
@@ -62,34 +95,6 @@
 
 
 
-
-
-<table>
-  <tr>
-    <th>S.No</th>
-    <th>
-      Employee Name
-    </th>
-    <th>Employee Age</th>
-    <th>Employee city</th>
-    <th>Employee Salary</th>
-    <th>Action</th>
-  </tr>
-
-
-  <tr *ngFor="let employee of employees;let i=index;let even=even;let odd=odd; let first=first;let last=last" [ngClass]="{evenClass:first,oddClass:odd}">
-<td>{{i+1}}</td>
-    <td>{{employee.name}}</td>
-    <td>{{employee.age}}</td>
-    <td>{{employee.city}}</td>
-    <td>{{employee.salary}}</td>
-    <td><button class="btn btn-warning">EDIT</button></td>
-
-  </tr>
-
-
-
-</table>
 
 
 <ul *ngFor="let team of cricketTeams" [ngSwitch]="team.teamName">
@@ -145,3 +150,6 @@
     {{movie}}
   </p>
 </div>
+
+
+
