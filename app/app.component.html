@@ -36,6 +36,16 @@
 
 <app-header></app-header>
 
+<!-- <input type="text" [value]='name' (input)='name=$event.target.value'> -->
+
+<input type="text" [(ngModel)]='name'>
+
+
+
+<p>Entered Text : {{name}}</p>
+
+<h1>{{selectedCity}}</h1>
+
 <table>
   <tr>
     <th>S.No</th>
