@@ -11,7 +11,7 @@ export class AppComponent {
   employees:any[]=
 
   [
-{name:"venkat",age:25,city:"hyd",salary:"100k",empImg:"https://in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/darbar-et00116717-07-11-2019-06-14-06.jpg"},
+{name:"venkat123",age:25,city:"hyd",salary:"100k",empImg:"https://in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/darbar-et00116717-07-11-2019-06-14-06.jpg"},
 {name:"srinivas",age:35,city:"pune",salary:"100k"},
 {name:"siva",age:36,city:"blr",salary:"900k"},
 {name:"udhay",age:39,city:"mum",salary:"90k"},
